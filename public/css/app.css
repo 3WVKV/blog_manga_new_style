@@ -1,0 +1,218 @@
+/* LOADING */
+
+.loader {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+
+}
+
+#loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #ffffff;
+}
+
+/* Login */
+.login-h1{
+    font-size: 5rem;
+    color: rgb(15, 117, 233);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Nav */
+
+.home-icon {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.btn-search-nav{
+	padding: 0px;
+}
+
+
+.btn-search-nav:hover {
+
+	background-color: gray;
+
+}
+
+
+.register-icon:hover{
+	color: green;
+}
+
+
+.logout-icon:hover{
+
+	color: red;
+
+}
+.login-icon:hover{
+	color: #1266f1;
+}
+
+
+/* Reset Password  */
+
+.reset-password{
+    max-width: 500px;
+}
+
+
+/* Comments */
+
+/* New comment */
+.comment-area{
+    height: 200px;
+	
+}
+
+
+
+/* Show comments */
+
+.link-muted { 
+    color: #aaa; 
+} 
+
+.link-muted:hover {
+    color: #1266f1; 
+}
+/* CODE ERREUR  */
+
+.error403{
+    max-width: 1080px;
+}
+
+
+/* Article Index */
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
+
+* {
+	box-sizing:border-box;
+}
+
+#card_container {
+	width:700px;
+	height:350px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-175px 0 0 -350px;
+}
+#card {
+	animation:backAn 50s infinite;
+	color:#fff;
+	padding:30px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1;
+	box-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(0, 76, 86, 0.6);
+}
+#card .text-block {
+	position:relative;
+	z-index:2;
+	text-shadow:0 3 10 rgba(0, 0, 0, 0.7);
+}
+#card .text-block h1 {
+	font-family:'Rubik', Sans-serif;
+	font-size:3em;
+	margin:0;
+	text-transform:uppercase;
+	font-weight:700;
+}
+#card .text-block h1 small {
+	font-size:.4em;
+	color:#ccc;
+	position:relative;
+	bottom:10px;
+}
+#card .text-block h3 {
+	margin:0;
+	font-weight:700;
+}
+#card .text-block p {
+	font-weight:300;
+	width:60%;
+}
+
+#card_container .pg {
+	position:absolute;
+	height:450px;
+	width:40%;
+	right:-10px;
+	bottom:0px;
+	z-index:2;
+}
+#card_container .pg > img{
+	height:450px;
+}
+.shine {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 60%);
+	z-index:1;
+}
+
+
+.div-btn {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+.div-btn:hover{
+	background-color: gray;
+	
+}
+
+
+@keyframes backAn {
+	0% {
+		background-size:100%;
+	}
+	50% {
+		background-size:170%;
+	}
+	100% {
+		background-size:100%;
+	}
+}
+
+
+
+
+/* CONTACT FORM */
+
+
+
+
+
+/* Bouton SCROLL TO TOP */
+

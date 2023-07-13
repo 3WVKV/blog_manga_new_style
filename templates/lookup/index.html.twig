@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<h1 class="text-center">Résultat de la recherche</h1>
+
+<table class="d-flex justify-content-center mt-5">
+    {% for article in articles %}
+
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>
+                <a class="mx-2" href="{{ path('app_article_show', {'slug': article.slug }) }}">Voir</a>
+                </td>
+            </tr>
+    {% else %}
+        <p> 
+            Aucun article disponible pour ces critères de recherche
+        </p>
+    {% endfor %}
+</table>
+{% endblock %}

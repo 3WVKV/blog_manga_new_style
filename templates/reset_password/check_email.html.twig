@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | Email envoyé{% endblock %}
+
+{% block body %}
+    <p>
+        Si cette adresse email est valide, un email contenant un lien vous permettant de réinitialiser votre mot de passe vous à été envoyé. Ce lien expire dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+        
+    </p>
+    <p>Si vous n'avez rien reçu, vérifiez vos spams, sinon veuillez réessayer <a href="{{ path('app_forgot_password_request') }}">en cliquant ici</a>.</p>
+{% endblock %}

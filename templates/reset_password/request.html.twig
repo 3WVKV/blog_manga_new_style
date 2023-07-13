@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | Réinitialisation du mot de passe{% endblock %}
+
+    {% block stylesheets %}
+        {{ parent() }}
+    {% endblock %}
+{% block body %}
+
+    {% for flash_error in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    <div class="d-flex justify-content-center">
+        <div class="card text-center reset-password">
+            <div class="card-header h5 text-white bg-primary">Réinitialiser votre mot de passe</div>
+            <div class="card-body px-5">
+                <p class="card-text py-2">
+                    Veuillez saisir votre adresse email, nous vous enverrons un lien pour réinitialiser votre mot de passe.
+                </p>
+                <div class="form-outline">
+                    {{ form_start(requestForm, {'attr': {'role': 'form', 'autocomplete': 'off', 'class': 'form'}}) }}
+                        {{ form_widget(requestForm.email, {'attr': {'class': 'form-control my-3', 'placeholder': 'Adresse email'}}) }}
+                </div>
+                    <input name="recover-submit" class="btn btn-primary w-100" value="Réinitialiser" type="submit">
+                                    {{ form_end(requestForm) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,28 @@
+fm_elfinder:
+    assets_path: /assets
+    instances:
+        default:
+            locale: fr
+            editor: ckeditor
+            theme: smoothness
+            connector:
+                binds:
+                    upload.presave:
+                    - Plugin.AutoResize.onUpLoadPreSave
+                plugins:
+                    AutoResize: # global resize options, applies to root which don't have his own resize configuraion
+                        enable: true
+                        maxWidth: 1296
+                        maxHeight: 750
+                roots:
+                    uploads:
+                        driver: LocalFileSystem
+                        path: uploads/article_content
+                        show_hidden: false
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg', 'image/webp' ]
+                        upload_deny: ['all']
+                        upload_max_size: 3M
+            
+
+
+

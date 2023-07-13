@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | {{ category.name }} {% endblock %}
+
+{% block body %}
+    <h1 class="text-center mb-5">Categorie : {{ category.name }}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre de l'article</th>
+                <th>Contenu</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.content | raw  }}</td>
+                <td>
+                    <a href="{{ path('app_article_show', {'slug': article.slug}) }}">Voir</a>
+                </td>
+            </tr>
+
+            
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun article trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <a href="{{ path('app_category_index') }}">Revenir à la liste des catégories</a>
+
+
+{% endblock %}

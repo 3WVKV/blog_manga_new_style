@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | Categories{% endblock %}
+
+{% block body %}
+    <h1 class="text-center mb-5">Liste des categories</h1>
+
+    <table class="table ">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.name }}</td>
+                <td>
+                    <a href="{{ path('app_category_show', {'slug': category.slug}) }}">Voir</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Aucune catégorie trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+

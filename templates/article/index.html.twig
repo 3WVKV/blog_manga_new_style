@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | Nos articles{% endblock %}
+
+{% block body %}
+    <h1>Liste des articles</h1>
+
+{% for article in articles %}
+
+    <div id="card_container">
+
+        <div id="card" style="background:url({{app.request.basepath}}/uploads/{{article.thumbnail}}) 50% center;">
+            <div class="shine"></div>
+            <div class="text-block">
+                <h1 class="text-center">{{article.title}}</h1>
+                <h3>Genre : {{article.category}}</h3>
+                <br>
+
+                <h4>Description :</h4>
+
+                <p>
+                    {{article.description}}
+			    </p>
+
+                <div class="div-btn ">
+                    <a class="text-white text-decoration-none border-white pouet" href="{{ path('app_article_show', {'slug': article.slug }) }}">Voir l'article</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+
+{% endblock %}
+

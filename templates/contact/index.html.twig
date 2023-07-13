@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}3WVKV | Contact{% endblock %}
+
+{% block body %}
+
+
+<h1 class="text-center mb-5">Contactez-nous</h1>
+
+{{ form_start(form) }}
+    <div class="border-2 p-5 rounded-3" style="background-image: url('/assets/images/banniere_accueil.jpg')">
+        <div class="form-group">
+            {{ form_label(form.email, null, {'label_attr': {'class': 'text-light'}}) }}
+
+            {{ form_widget(form.email, { 'attr': {'class': 'form-control my-3', 'id': 'exampleInputEmail1'} }) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.subject, null, {'label_attr': {'class': 'text-light'}}) }}
+            {{ form_widget(form.subject, { 'attr': {'class': 'form-control my-3', 'id': 'exampleInputSubject1'} }) }}
+        </div>
+        <div class="form-group ">
+            {{ form_label(form.content, null, {'label_attr': {'class': 'text-light'}}) }}
+            {{ form_widget(form.content, { 'attr': {'class': 'form-control my-3 comment-area flex-wrap', 'id': 'exampleInputContent1'} }) }}
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <button type="submit" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" style="color: white;">
+                    <style>@keyframes open{0%{transform:translateX(10px) scale(0);transform-origin:50% 100%}to{transform:scale(1);transform-origin:50% 100%}}</style>
+                    <rect width="12" height="10" x="6" y="8.804" stroke="#0A0A30" stroke-width="1.5" rx="2"/>
+                    <path fill="#fff" stroke="#265BFF" stroke-width="1.5" d="M9 6.196a1 1 0 011-1h4a1 1 0 011 1v5.082a1 1 0 01-.37.777l-2.006 1.628a1 1 0 01-1.263-.002l-1.993-1.626A1 1 0 019 11.28V6.196z" style="animation:open 2s cubic-bezier(.49,.39,.35,1.06) both infinite"/>
+                    <path stroke="#0A0A30" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.465 11.413l3.573 2.783 3.497-2.783"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+{{ form_end(form) }}
+
+
+
+
+{% endblock %}
+
+
